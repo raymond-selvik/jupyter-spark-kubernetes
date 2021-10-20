@@ -24,3 +24,5 @@ spec:
             containerPort: 7077
           - name: blockmanger
             containerPort: 7078
+          - name: spark-ui
+            containerPort: 4040
