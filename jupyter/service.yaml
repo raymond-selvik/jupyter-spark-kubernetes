@@ -19,3 +19,7 @@ spec:
       protocol: TCP
       port: 7078
       targetPort: 7078
+    - name: spark-ui
+      protocol: TCP
+      port: 4040
+      targetPort: 4040
