@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jupyter-deployment
+  labels:
+    app: jupyter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jupyter
+  template:
+    metadata:
+      labels:
+        app: jupyter
+    spec:
+      containers:
+      - name: jupyter
+        image: jupyter:0.1
+        ports:
+          - name: jupyter
+            containerPort: 8888
+          - name: spark-driver
+            containerPort: 7077
+          - name: blockmanger
+            containerPort: 7078

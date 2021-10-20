@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jupyter-pod
+  labels:
+    app: jupyter
+spec:
+  containers:
+  - name: jupyter
+    image: jupyter:0.1
+    ports:
+      - name: jupyter
+        containerPort: 8888
+      - name: spark-driver
+        containerPort: 7077
+      - name: blockmanger
+        containerPort: 7078
